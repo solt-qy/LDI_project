@@ -1,20 +1,41 @@
-# LDI_project
-Final project for ELEN90088 System Optimisation &amp; Machine Learning
+# FIR Filter Design Using Convex Optimization and Multilabel Classification of Environmental Noise
+LDI project for ELEN90088 System Optimisation &amp; Machine Learning, Semester 1 2022
 
-## Packages
-### echo
-Package for handling echo related tasks. Uses the python wrapper for sox, which requires the sox system library, as well as the python library
-```
-# optional - if you want support for mp3, flac and ogg files
-$ apt-get install libsox-fmt-all
-# install the sox command line tool
-$ apt-get install sox
-# install pysox
-$ pip install sox
-```
+This repository contains a number of jupyter notebooks associated with the exploration, problem formulation and solution implementation related to 
+the chosen topic.  
 
-Read more [here](https://pysox.readthedocs.io/en/latest/)
+#### Abstract
+    We explore the problem of classification of urban environmental noise sources, using a number of optimisation 
+    techniques, modern and classical machine learning methods. The project is contextualised by considering sensor data 
+    gathered by a network of IoT style noise monitors, deployed in various urban environments. 
+    The noise monitors measure a variety of noise sources, such as road traffic, wildlife, machinery and aircraft noise, 
+    under a variety of conditions affecting the quality of data. 
+    Applicable techniques will be compared and contrasted at data pre-processing and classification stages of a noise analysis 
+    pipeline, with the broad goal of designing a robust implementation for classifying common environmental noise sources.
+    
+## Setup
+As some datasets used are large, or closed source, certain files may not be available at runtime for the markers. 
+Static images, summaries and results are provided where appropriate, along with saved notebook outputs.
 
-#### generate_echos.py
-Utilities to batch generate echo files suitable for testing algorithms.
-A package will be supplied directly, but feel free to generate your own if required.
+Should you wish to run source code yourself
+1. Activate your desired python environment
+2. Install librariries into the environment.  `pip install -r requirements.txt`
+3. Start the notebook `jupyter notebook`
+4. Explore the notebooks!
+
+## Structure
+
+(Insert tree diagram of finalised repo here)
+
+## Content Summaries
+### 01_optimisation/
+#### notebook.ipynb
+(Summary here)
+#### notebook.ipynb
+(Summary here)
+
+### 02_machine_learning/
+#### notebook.ipynb
+(Summary here)
+#### notebook.ipynb
+(Summary here)
