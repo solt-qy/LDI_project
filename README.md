@@ -35,7 +35,7 @@ Should you wish to run source code yourself
 (Summary here)
 
 ### 02_machine_learning/
-#### notebook.ipynb
-(Summary here)
+#### 01_dataset_curation.ipynb
+Provides an introduction to the datasets, and tools to manipulate and explore.
 #### notebook.ipynb
 (Summary here)
