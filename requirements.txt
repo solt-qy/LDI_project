@@ -6,4 +6,4 @@ tensorflow-io-gcs-filesystem==0.24.0
 tensorflow-addons
 notebook
 matplotlib
-hmmlearn=0.2.7
+hmmlearn
