@@ -7,3 +7,4 @@ tensorflow-addons
 notebook
 matplotlib
 hmmlearn
+scikit-learn
