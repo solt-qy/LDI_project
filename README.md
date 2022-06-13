@@ -23,19 +23,27 @@ Should you wish to run source code yourself
 3. Start the notebook `jupyter notebook`
 4. Explore the notebooks!
 
-## Structure
-
-(Insert tree diagram of finalised repo here)
-
 ## Content Summaries
 ### 01_optimisation/
-#### notebook.ipynb
-(Summary here)
-#### notebook.ipynb
-(Summary here)
+#### bandpass
+folder that stores sample data for bandpass filter design
+#### lowpass
+folder that stores sample data for lowpass filter design
+#### Optimization (FIR Filter Design)-Lowpass.ipynb
+Code for lowpass filter design
+#### Optimization (FIR Filter Design)-Bandpass.ipynb
+Code for bandpass filter design
 
 ### 02_machine_learning/
 #### 01_dataset_curation.ipynb
 Provides an introduction to the datasets, and tools to manipulate and explore.
-#### notebook.ipynb
-(Summary here)
+#### 02_DNN_structure.ipynb
+Different types of DNN models, also code for training
+#### 03_Classical_vs_DNN.ipynb
+Comparison between Classical ML method and DNN peroformance
+#### 04_Model_Evaluation.ipynb
+Evaluating the performance of the trained DNN model
+
+## Data For DNN training
+The dataset for training was too large for uploading, therefore if dataset is need to run the code
+please feel free tosend email to <ins>jsouth@student.unimelb.edu.au</ins> to request sample dataset for training the DNN above
