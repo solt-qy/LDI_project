@@ -1,5 +1,7 @@
 # FIR Filter Design Using Convex Optimization and Multilabel Classification of Environmental Noise
-LDI project for ELEN90088 System Optimisation &amp; Machine Learning, Semester 1 2022
+###LDI project for ELEN90088 System Optimisation &amp; Machine Learning, Semester 1 2022
+
+######Yuqin Qiu 928065 and Jonathan South 1042806
 
 This repository contains a number of jupyter notebooks associated with the exploration, problem formulation and solution implementation related to 
 the chosen topic.  
@@ -14,36 +16,66 @@ the chosen topic.
     pipeline, with the broad goal of designing a robust implementation for classifying common environmental noise sources.
     
 ## Setup
-As some datasets used are large, or closed source, certain files may not be available at runtime for the markers. 
-Static images, summaries and results are provided where appropriate, along with saved notebook outputs.
+As some datasets used are large, or closed source, certain files may not be available at runtime for the markers.  
+Static images, summaries and results are provided where appropriate, along with saved notebook outputs. 
+Queries about datasets should be directed to <ins>j.south@student.unimelb.edu.au</ins>.
 
 Should you wish to run source code yourself
 1. Activate your desired python environment
-2. Install librariries into the environment.  `pip install -r requirements.txt`
+2. Install librariries into the environment.  `pip install -r requirements.txt` (N.B. System libraries may also need to be installed).
 3. Start the notebook `jupyter notebook`
 4. Explore the notebooks!
 
 ## Content Summaries
+```
+.
+├── 01_optimization
+│   ├── Optimization\ (FIR\ Filter\ Design)-Bandpass.ipynb
+│   ├── Optimization\ (FIR\ Filter\ Design)-Lowpass.ipynb
+│   ├── bandpass
+│   └── lowpass
+├── 02_machine_learning
+│   ├── 01_dataset_curation.ipynb
+│   ├── 02_DNN_structure.ipynb
+│   ├── 03_Classical_vs_DNN.ipynb
+│   ├── 04_Model_Evaluation.ipynb
+│   ├── example_data
+│   └── images
+├── README.md
+└── requirements.txt
+```
+
 ### 01_optimisation/
-#### bandpass
-folder that stores sample data for bandpass filter design
-#### lowpass
-folder that stores sample data for lowpass filter design
+Notebooks associated with the optimisation (filtering) task
+####Optimization (FIR Filter Design)-Bandpass.ipynb
+Code for designing a bandpass filter using convex optimisation.
 #### Optimization (FIR Filter Design)-Lowpass.ipynb
-Code for lowpass filter design
-#### Optimization (FIR Filter Design)-Bandpass.ipynb
-Code for bandpass filter design
+Code for designing a lowpass filter using convex optimisation.
+#### bandpass/
+Contains .wav files used as sample data in the bandpass filter design
+#### lowpass/
+Contains .wav files used as sample data in the lowpass filter design
+
 
 ### 02_machine_learning/
+Notebooks associated with the machine learning (classification) task. Heavy use of the `pandas`, `numpy` and `tensorflow` python libraries.
 #### 01_dataset_curation.ipynb
-Provides an introduction to the datasets, and tools to manipulate and explore.
+Provides an introduction to the datasets, and tools to manipulate, listen to and explore audio files.
+Also gives utilities for data augmentation, and creating balanced classes for training.
+Dataframes at this stage can be pickled to disk for easy retrieval in other notebooks.
 #### 02_DNN_structure.ipynb
-Different types of DNN models, also code for training
+Create the architectures for the different CNN models. Load in and generate test/train splits from selected data (usually generated in 01_dataset_curation.ipynb).
+Select loss and validation metrics, fit the models, and save weights as `.hdf5` files.
 #### 03_Classical_vs_DNN.ipynb
-Comparison between Classical ML method and DNN peroformance
+Create a Gaussian HMM single label classifier, and compare performance to a CNN model (trained on identical data).
 #### 04_Model_Evaluation.ipynb
-Evaluating the performance of the trained DNN model
-
-## Data For DNN training
-The dataset for training was too large for uploading, therefore if dataset is need to run the code
-please feel free tosend email to <ins>jsouth@student.unimelb.edu.au</ins> to request sample dataset for training the DNN above
+Perform "fold" like model evaluation on the models trained in `02_DNN_structure.ipynb`. 
+Select evaluation metrics and plot distribution of performance across k different "folds" (sensor deployments)
+#### example_data/
+Directory providing sample data in the structure of the larger dataset used for training.
+#### images/
+Static images for used for exemplary purposes, and to hold some outputs generated in notebooks.
+## Data For DNN Training
+The dataset used for DNN training was too large for uploading, and is also primarily closed source.
+If any additional data is required to run the code, or if there are any questions, please feel free 
+send email to <ins>j.south@student.unimelb.edu.au</ins> for further information.
